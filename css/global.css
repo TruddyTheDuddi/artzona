@@ -14,7 +14,7 @@
     --hl_sec: #d2f898;
     --hl_tern: #E54F6D; */
     --hl_prim: #B9D85A;
-    --hl_sec: #7d91cc;
+    --hl_sec: #87b4e3;
     --hl_tern: #E54F6D;
     --white_txt: #fcfcfc;
 }
@@ -45,6 +45,7 @@ body{
     background-position: top center;
     font-family: Monsterrat, sans-serif;
     color: var(--white_txt);
+    font-size: 17px;
 }
 
 h1{
@@ -186,6 +187,7 @@ small{
 .box{
     filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
     padding: 10px 25px;
+    padding: 20px 30px;
 }
 
 .box_barred::after{
