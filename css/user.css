@@ -1,0 +1,80 @@
+.wide_container{
+    margin: 20px auto;
+    max-width: 1400px;
+}
+
+.user_ident{
+    max-width: 400px;
+}
+
+.user_top{
+    margin: 25px;
+    margin-bottom: -80px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.user_top .pfp{
+    width: 140px;
+    height: 140px;
+    display: block;
+    position: relative;
+}
+
+.pfp img{
+    width: 140px;
+    height: 140px;
+    display: block;
+    clip-path: polygon(3% 3%, 100% 0%, 98% 96%, 0% 100%);
+}
+
+.user_top .pfp::before{
+    content: '';
+    z-index: -1;
+    transform: scale(0.95) translateX(9px) translateY(9px);
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    display: block;
+    clip-path: polygon(3% 3%, 100% 0%, 98% 96%, 0% 100%);
+    background-color: var(--hl_prim);
+}
+
+.user_top .name{
+    font-family: Chinese Rocks;
+    font-size: 60px;
+    margin-left: 15px;
+}
+
+.user_top .name::before{
+    content: '@';
+    font-size: smaller;
+    margin-right: 2px;
+    color: var(--hl_prim)
+}
+
+.ident_info{
+    background-color: var(--dark);
+    clip-path: polygon(0% 4%, 100% 0%, 98% 96%, 2% 100%);
+    padding: 20px 25px;
+    padding-top: 75px;
+    /* Optional? Dunno, looks cool!
+    border-bottom: 8px solid var(--hl_prim); */
+}
+
+.tagline{
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+/* .tagline::before{
+    display: block;
+    content: '— Who is';
+    opacity: 0.5;
+    font-weight: bold;
+    font-family: Chinese Rocks;
+    font-size: 20px;
+} */
