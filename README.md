@@ -1,2 +1,2 @@
-# ArtZona
-It is what it is
+## Artzona
+frontend, I guess
