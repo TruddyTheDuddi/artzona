@@ -24,7 +24,7 @@
     position: relative;
 }
 
-.pfp img{
+.user_top .pfp img{
     width: 140px;
     height: 140px;
     display: block;
@@ -47,6 +47,7 @@
     font-family: Chinese Rocks;
     font-size: 60px;
     margin-left: 15px;
+    white-space: nowrap;
 }
 
 .user_top .name::before{
@@ -61,8 +62,8 @@
     clip-path: polygon(0% 4%, 100% 0%, 98% 96%, 2% 100%);
     padding: 20px 25px;
     padding-top: 75px;
-    /* Optional? Dunno, looks cool!
-    border-bottom: 8px solid var(--hl_prim); */
+    /* Optional? Dunno, looks cool! */
+    /* border-bottom: 8px solid var(--hl_prim); */
 }
 
 .tagline{
@@ -78,3 +79,103 @@
     font-family: Chinese Rocks;
     font-size: 20px;
 } */
+
+/* Post area */
+.post_area{
+    margin-top: 50px;
+    max-width: 600px;
+}
+
+.post{
+    position: relative;
+    padding: 0 80px 0 60px;
+    display: grid;
+}
+
+.post .backdrop{
+    position: absolute;
+    background-color: var(--dark);
+    left: 20px;
+    top: 0;
+    width: calc(100% - 75px);
+    height: calc(100% - 20px);
+    z-index: -1;
+    clip-path: polygon(25px 0px, 100% 8px, calc(100% - 10px) calc(100% - 15px), 5px 100%);
+}
+
+.post .content{
+    background-color: var(--dark_hover);
+    margin: -15px -80px -10px -50px;
+    padding: 35px 28px 15px 28px;
+
+    clip-path: polygon(0px 20px, 100% 8px, calc(100% - 10px) calc(100% - 5px), 5px 100%);
+}
+
+.post .content img{
+    max-width: 100%;
+}
+
+.post .user_info{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.post .user_info::before{
+    content: "";
+    clip-path: polygon(100% 0, 49% 50%, 100% 100%);
+    position: absolute;
+    background-color: var(--dark);
+    top: 5px;
+    left: -60px;
+    height: 60px;
+    width: 50px;
+}
+
+.post .pfp{
+    position: relative;
+    margin: 12px;
+    margin-right: 25px;
+    transform: scale(1.6) translateY(-10px);
+}
+
+.post .pfp img{
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.post .pfp::before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--hl_prim);
+    transform: translate(3px, 3px) rotate(2deg); /* Positive value for roation might look better */
+}
+
+.post .author{
+    font-family: Chinese Rocks;
+    font-size: 30px;
+}
+
+.post .author::before{
+    content: "@";
+    font-size: 16px;
+    margin-right: 2px;
+    color: var(--hl_prim);
+}
+
+.post .time{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.post .time:hover{
+    text-decoration: underline;
+}
+
+.post .interact{
+    margin: 10px;
+}

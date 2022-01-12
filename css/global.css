@@ -19,9 +19,15 @@
     --white_txt: #fcfcfc;
 }
 
+/* ::-moz-selection,
+::selection{
+    background-color: #ecc632;
+    text-shadow: 1px 1px 0px var(--dark);
+} */
+
 @font-face {
     font-family: Monsterrat;
-    src: url(../font/kosmik.ttf);
+    src: url(../font/Montserrat-Black.ttf);
     font-weight: 1000;
 }
 
@@ -37,6 +43,11 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: Chinese Rocks;
+    src: url(../font/chinese-rocks.ttf);
+}
+
 body{
     background-color: var(--bg_side);
     background-image: url(../img/site/bg_full.jpg);
@@ -45,7 +56,7 @@ body{
     background-position: top center;
     font-family: Monsterrat, sans-serif;
     color: var(--white_txt);
-    font-size: 17px;
+    font-size: 16px;
 }
 
 h1{
@@ -235,3 +246,9 @@ hr{
     content: " /";
     font-weight: normal;
 }
+
+
+
+
+
+
