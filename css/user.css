@@ -90,6 +90,7 @@
     position: relative;
     padding: 0 80px 0 50px;
     display: grid;
+    margin: 50px 0;
 }
 
 .post .backdrop{
@@ -117,6 +118,7 @@
 
 .post .user_info{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     position: relative;
     margin-left: 10px;
@@ -169,6 +171,7 @@
 }
 
 .post .time{
+    margin: 5px;
     margin-left: auto;
     cursor: pointer;
 }
@@ -179,4 +182,23 @@
 
 .post .interact{
     margin: 20px 0px;
+}
+
+.post .cont_image{
+    background-color: var(--bg_side);
+    margin: 0 -70px 0 -40px;
+    display: block;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    border-left: 7px solid var(--light);
+    padding-left: 4px;
+    clip-path: polygon(0px 0px, 100% 0%, 100% 100%, 5px 100%);
+}
+
+.post .cont_image img{
+    max-width: 100%;
+    max-height: 70vh;
+    min-height: 200px;
+    display: block;
+    margin: auto;
 }
