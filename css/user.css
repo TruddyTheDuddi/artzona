@@ -181,7 +181,8 @@
 }
 
 .post .interact{
-    margin: 20px 0px;
+    display: flex;
+    margin: 0 -20px;
 }
 
 .post .cont_image{
@@ -203,7 +204,28 @@
     margin: auto;
 }
 
+.post .counter{
+    margin: 15px;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.post .counter::before{
+    content: "✖︎";
+    font-size: 12px;
+    margin: 2px;
+    font-weight: normal;
+    color: var(--hl_prim);
+    
+}
+
+@keyframes count_up {
+    0%{color: var(--hl_prim)}
+    100%{color: var(--white_txt)}
+}
+
 .post .like_btn{
+    margin: 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -328,6 +350,6 @@
 
 @keyframes shake {
     0%{transform: translateY(0px) rotate(0deg);}
-    9%{transform: translateY(6px) rotate(-0.4deg);}
+    9%{transform: translateY(6px) rotate(-0.6deg);}
     100%{transform: translateY(0px) rotate(0deg);}
 }

@@ -46,9 +46,16 @@ function slapAnimate(b){
 
     // Timeout for post block move
     setTimeout(function(){
-        b.parentElement.parentElement.style.animation = "none";
-        b.offsetHeight;
-        b.parentElement.parentElement.style.animation = "shake 1s cubic-bezier(0.19, 1, 0.22, 1)";
+        let postBox = b.parentElement.parentElement;
+        let counter = postBox.querySelector("#slap_count");
+        let nb = parseInt(counter.innerHTML) + 1;
+        
+        postBox.style.animation = "none"; counter.style.animation = "none";
+        postBox.offsetHeight; counter.offsetHeight;
+
+        postBox.style.animation = "shake 1s cubic-bezier(0.19, 1, 0.22, 1)";
+        counter.style.animation = "count_up 0.5s";
+        counter.innerHTML = nb;
     }, 300)
 
     // Timeout for removal
