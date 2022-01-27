@@ -93,6 +93,21 @@
     margin: 50px 0;
 }
 
+.post .delete{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 14px 20px;
+    width: 20px;
+    opacity: 0.3;
+    user-select: none;
+    cursor: pointer;
+}
+
+.post .delete:hover{
+    opacity: 0.5;
+}
+
 .post .backdrop{
     position: absolute;
     background-color: var(--dark);
@@ -244,10 +259,14 @@
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* .post .like_btn:hover .icn{
+.post .like_btn:hover .icn{
     transform: scale(2);
-    margin-right: 20px;
-} */
+    margin-right: 18px;
+}
+
+.post .like_btn:active .icn{
+    transform: scale(1.7);
+}
 
 .post .like_btn .slap{
     position: absolute;
